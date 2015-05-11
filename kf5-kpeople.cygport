@@ -1,0 +1,33 @@
+inherit kf5
+
+NAME="kf5-kpeople"
+VERSION=5.9.0
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 contacts library"
+DESCRIPTION="KPeople offers unified access to contacts from different sources,
+grouping them by person while still exposing all the data. Furthermore, KPeople
+will also provide facilities to integrate the data provided in user interfaces
+by providing QML and Qt Widgets components."
+
+PKG_NAMES="libKF5People5 libKF5People-devel"
+libKF5People5_CONTENTS="
+	usr/bin/cygKF5People-5.dll
+	usr/bin/cygKF5PeopleBackend-5.dll
+	usr/bin/cygKF5PeopleWidgets-5.dll
+	${QT5_QMLDIR#/}/
+	usr/share/doc/
+	usr/share/kf5/kpeople/
+	usr/share/kservicetypes5/
+	usr/share/locale/
+"
+libKF5People_devel_REQUIRES="libKF5CoreAddons-devel libKF5I18n-devel libKF5ItemViews-devel libKF5Service-devel libKF5WidgetsAddons-devel libQt5Core-devel libQt5Gui-devel"
+libKF5People_devel_CONTENTS="
+	usr/include/KF5/KPeople/
+	usr/lib/cmake/KF5People/
+	${QT5_MKSPECSDIR#/}/modules/qt_KPeople.pri
+	${QT5_MKSPECSDIR#/}/modules/qt_KPeopleWidgets.pri
+	usr/lib/libKF5People.dll.a
+	usr/lib/libKF5PeopleBackend.dll.a
+	usr/lib/libKF5PeopleWidgets.dll.a
+"
