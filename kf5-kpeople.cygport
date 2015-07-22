@@ -10,6 +10,8 @@ grouping them by person while still exposing all the data. Furthermore, KPeople
 will also provide facilities to integrate the data provided in user interfaces
 by providing QML and Qt Widgets components."
 
+PATCH_URI="5.12.0-dllexport.patch"
+
 PKG_NAMES="libKF5People5 libKF5People-devel"
 libKF5People5_CONTENTS="
 	usr/bin/cygKF5People-5.dll
