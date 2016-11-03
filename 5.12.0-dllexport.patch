@@ -1,14 +1,3 @@
---- origsrc/kpeople-5.12.0/examples/CMakeLists.txt	2015-07-05 04:11:07.000000000 -0500
-+++ src/kpeople-5.12.0/examples/CMakeLists.txt	2015-07-21 19:00:24.426118200 -0500
-@@ -16,7 +16,7 @@ target_link_libraries(personwidget Qt5::
- # target_link_libraries(loadcontact Qt5::Core Qt5::Gui KF5::People)
- 
- add_executable(duplicates duplicates.cpp)
--target_link_libraries(duplicates KF5::People KF5::CoreAddons)
-+target_link_libraries(duplicates KF5::People KF5::PeopleBackend KF5::CoreAddons)
- 
- add_executable(duplicatesdialog duplicatesdialog.cpp)
- target_link_libraries(duplicatesdialog KF5::PeopleWidgets Qt5::Widgets)
 --- origsrc/kpeople-5.12.0/src/backends/CMakeLists.txt	2015-07-05 04:11:07.000000000 -0500
 +++ src/kpeople-5.12.0/src/backends/CMakeLists.txt	2015-07-21 18:59:24.490007300 -0500
 @@ -13,7 +13,9 @@ target_link_libraries (KF5PeopleBackend
@@ -213,7 +202,7 @@
   */
 -KPEOPLE_EXPORT QList<QAction *> actionsForPerson(const QString &contactUri, QObject *parent);
 +KPEOPLEWIDGETS_EXPORT QList<QAction *> actionsForPerson(const QString &contactUri, QObject *parent);
- };
+ }
  
  #endif // KPEOPLEWIDGETS_GLOBAL_H
 --- origsrc/kpeople-5.12.0/src/widgets/mergedelegate.h	2015-07-05 04:11:07.000000000 -0500
