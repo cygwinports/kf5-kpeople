@@ -1,7 +1,7 @@
 inherit kf5
 
 NAME="kf5-kpeople"
-VERSION=5.27.0
+VERSION=5.35.0
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="KDE 5 contacts library"
@@ -10,7 +10,7 @@ grouping them by person while still exposing all the data. Furthermore, KPeople
 will also provide facilities to integrate the data provided in user interfaces
 by providing QML and Qt Widgets components."
 
-PATCH_URI="5.12.0-dllexport.patch"
+#PATCH_URI="5.12.0-dllexport.patch"
 
 PKG_NAMES="libKF5People5 libKF5People-devel"
 libKF5People5_CONTENTS="
